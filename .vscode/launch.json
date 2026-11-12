@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "inputs": [
+    {
+      "id": "target",
+      "type": "promptString",
+      "description": "Nhap: list | all | V1 | V1-C2 ...",
+      "default": "V1-C2"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Chay case (F5, nhap ten case)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["${input:target}", "--gif"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
